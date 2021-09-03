@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family:'Cabin', sans-serif;
+    src: url("./assets/fonts/static/Cabin_Condensed/Cabin_Condensed-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family:'Cabin', sans-serif;
+    src: url("./assets/fonts/static/Cabin_Condensed/Cabin_Condensed-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+body {
+    background-color: var(--dark-blue);
+}
+
+main {
+    cursor: url(img.png), auto;
+}
+
+:root {
+    --light-blue: #00F0FF;
+    --dark-blue: #181747;
+    --anton-font: 'Anton', sans-serif;
+    --cabin-font: 'Cabin', sans-serif;
+}
+
+section, div {
+    border: 1px solid red;
+}
+
+h1 {
+    position: relative;
+}
+
+header {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #ffff;
+}
+
+header img {
+    width: 6rem;
+    height: 6rem;
+    
+}
+
+.logo-container {
+    width: 30%;
+    position: relative;
+}
+.logo-container img{
+    position: absolute;
+    left: 2rem;
+}
+.nav-container{
+    width: 70%;
+}
+.nav-container nav ul , .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.nav-container nav ul li {
+    list-style: none;
+    margin: 0 2rem;
+    color: #ffff;
+    font-family: var(--cabin-font);
+    font-size: 1.8rem;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: row; 
+    /* in mobile flex-direction: column */
+    width: 100%;
+    margin-top: 5rem;
+}
+.presentation .greeting-container {
+    width: 60%;
+    color: #ffff;
+    font-size: 4.5rem;
+}
+.small-font {
+    color: var(--light-blue);
+    font-size: 1.8rem;
+    font-family: var(--cabin-font);
+    font-weight: 400;
+    position: absolute;
+    top: 5rem;
+    left: 8rem;
+}
+.the-name {
+    font-size: 17rem;
+    font-weight: 400;
+    font-family: var(--anton-font);
+}
+.the-profession {
+    background-color: var(--light-blue);
+    width: fit-content;
+    font-size: 5.5rem;
+    font-family: var(--anton-font);
+    padding: .5rem;
+    color: #000;
+    margin-top: -4rem;
+
+}
+
+.presentation .light-container {
+    width: 40%;
+}
+.greeting-container, .light-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.light-container .round-light {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+
+}
+
