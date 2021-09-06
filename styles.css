@@ -45,6 +45,7 @@ section, div {
 
 h1 {
     position: relative;
+    width: 455px;
 }
 
 header {
@@ -99,7 +100,33 @@ header img {
     width: 60%;
     color: #ffff;
     font-size: 4.5rem;
+    position: relative;
+    background: var(--dark-blue);
 }
+
+.text-animation {
+    position: relative;
+    width: 455px;
+    height: 205px;
+}
+
+.text-animation video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+/* .text-animation p {
+    position: absolute;
+    width: 100%;
+    font-size: 17rem;
+    color: white;
+    background: red;
+    mix-blend-mode: multiply;
+} */
+
 .small-font {
     color: var(--light-blue);
     font-size: 1.8rem;
@@ -108,11 +135,23 @@ header img {
     position: absolute;
     top: 5rem;
     left: 8rem;
+    z-index: 5;
 }
 .the-name {
     font-size: 17rem;
     font-weight: 400;
+    height: 205px;
     font-family: var(--anton-font);
+    color: white;
+    /* color: #c3c0c0; */
+    text-align: center;
+    position: absolute;
+    /* width: 100%; */
+    margin-left: -6rem;
+    padding-left: 6.2rem;
+    background: black;
+    mix-blend-mode: multiply;
+    /* -webkit-text-stroke: 1px white; */
 }
 .the-profession {
     background-color: var(--light-blue);
@@ -121,7 +160,8 @@ header img {
     font-family: var(--anton-font);
     padding: .5rem;
     color: #000;
-    margin-top: -4rem;
+    margin-top: 1rem;
+    z-index: 5;
 
 }
 
