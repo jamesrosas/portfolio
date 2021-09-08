@@ -87,16 +87,18 @@ header img {
 
 .presentation {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row; 
     /* in mobile flex-direction: column */
     width: 100%;
     margin-top: 5rem;
 }
 .presentation .greeting-container {
-    width: 60%;
+    width: 1fr;
     color: #ffff;
     font-size: 4.5rem;
     position: relative;
+    margin: 0 auto;
 }
 
 .text-animation {
@@ -160,7 +162,8 @@ header img {
 }
 
 .presentation .light-container {
-    width: 40%;
+    width: 300px;
+    margin: 0 auto;
 }
 
 .greeting-container, .light-container {
@@ -185,6 +188,10 @@ header img {
     100% {
         box-shadow: 0 0 4px cyan, 0 0 8px cyan;  
     }
+}
+.light-ball {
+    width: 3rem;
+    transform: translateY(210px);
 }
 
 
@@ -290,3 +297,84 @@ footer p {
     font-size: 1.5rem;
     color: #ffff;
 }
+
+@media (max-width: 500px) {
+
+    .presentation {
+        flex-direction: column;
+        width: 100%;
+        overflow-x: clip;
+    }
+    .greeting-container {
+        width: 100%;
+    }
+    .text-animation {
+        width: 407px;
+    }
+
+    .the-name {
+        font-size: 15rem;
+        top: -2rem;
+        margin-left: -15.7rem;
+    }
+    .the-profession {
+        font-size: 4.7rem;
+        margin: 1rem auto;
+    }
+
+    .light-container {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    /* en el siguiente ejemplo cambie el margin-top de .photo-box para que asi en este viewport de menos de 600px la bola de luz alcanzara a tocar a la foto */
+    .photo-box {
+        margin-top: -55rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .text-animation {
+        width: 348px;
+        height: 140px;
+    }
+    .small-font {
+        top: 1rem;
+        left: 8.6rem;
+    }
+    .the-name {
+        font-size: 12rem;
+        height: 170px;
+        top: -2rem;
+        margin-left: -13.5rem;
+        margin-top: 0;
+    }
+    .the-profession {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .text-animation {
+        width: 312px;
+        height: 130px;
+    }
+    .small-font {
+        top: .5rem;
+        left: 7.2rem;
+    }
+    .the-name {
+        font-size: 11rem;
+        margin-left: -14.5rem;
+    }
+
+
+}
+
