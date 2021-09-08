@@ -24,3 +24,6 @@ scrollFunction(".about-me", 20, ".photo-box", lightPhoto2);
 
 const showPhoto = {opacity: "1", zIndex: "12"};
 scrollFunction(".about-me_photo", 20, ".photo-box img", showPhoto);
+
+const lightBallMobile = {width: "1rem", transform: "translateY(310px)"};
+scrollFunction(".light-container_mobile", 460, ".round-light_mobile", lightBallMobile);

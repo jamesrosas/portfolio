@@ -194,6 +194,10 @@ header img {
     transform: translateY(210px);
 }
 
+.light-container_mobile, .round-light_mobile {
+    display: none;
+}
+
 
 .about-me {
     display: flex;
@@ -300,10 +304,14 @@ footer p {
 
 @media (max-width: 500px) {
 
+    nav {
+        display: none;
+    }
     .presentation {
         flex-direction: column;
         width: 100%;
         overflow-x: clip;
+        margin-top: 10rem;
     }
     .greeting-container {
         width: 100%;
@@ -314,28 +322,52 @@ footer p {
 
     .the-name {
         font-size: 15rem;
-        top: -2rem;
+        top: -1.8rem;
         margin-left: -15.7rem;
     }
     .the-profession {
         font-size: 4.7rem;
         margin: 1rem auto;
     }
-
-    .light-container {
-        width: 100%;
-    }
-
-    nav {
+    .light-container, .round-light {
         display: none;
     }
 
-
-    /* en el siguiente ejemplo cambie el margin-top de .photo-box para que asi en este viewport de menos de 600px la bola de luz alcanzara a tocar a la foto */
-    .photo-box {
-        margin-top: -55rem;
+    .light-container_mobile {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+        margin-top: 5rem;
+        /* display: none; puedo eliminar la animacion orignal de descktop y hacer una especialmente para mobile */
+    }
+    .round-light_mobile {
+        display: flex;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        background-color: var(--light-blue);
+        animation: electric 3s infinite ease-out;
+        margin-top: -25rem;
     }
 
+    .about-me {
+        flex-direction: column-reverse;
+        /* margin-top: 20rem; */
+    }
+
+    .about-me_photo {
+        width: 100%;
+    }
+    .about-me_text {
+        width: 95%;
+        margin-top: 5rem;
+    }
+    .inner-about {
+        width: 85%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -363,7 +395,7 @@ footer p {
 
 @media (max-width: 320px) {
     .text-animation {
-        width: 312px;
+        width: 308px;
         height: 130px;
     }
     .small-font {
@@ -372,7 +404,7 @@ footer p {
     }
     .the-name {
         font-size: 11rem;
-        margin-left: -14.5rem;
+        margin-left: -15rem;
     }
 
 
