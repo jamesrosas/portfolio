@@ -26,6 +26,7 @@ html {
 
 body {
     background-color: var(--dark-blue);
+    overflow-x: clip;
 }
 
 /* main {
@@ -91,7 +92,9 @@ header img {
     flex-direction: row; 
     /* in mobile flex-direction: column */
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 12rem;
+    position: relative;
+    border: 1px solid red;
 }
 .presentation .greeting-container {
     width: 1fr;
@@ -166,6 +169,24 @@ header img {
     margin: 0 auto;
 }
 
+.presentation img {
+    width: 400px;
+    z-index: -1;
+    opacity: .7;
+}
+.left-arm {
+    position: absolute;
+    right: 35rem;
+    bottom: -11rem;
+    transform: rotate(-35deg);
+}
+.right-arm {
+    position: absolute;
+    right: -7rem;
+    top: -11rem;
+    transform: rotate(-35deg);
+}
+
 .greeting-container, .light-container {
     display: flex;
     align-items: center;
@@ -177,6 +198,9 @@ header img {
     border-radius: 50%;
     background-color: var(--light-blue);
     animation: electric 3s infinite ease-out;
+    position: absolute;
+    right: 30rem;
+    top: 11rem;
 }
 @keyframes electric {
     0% {
@@ -204,7 +228,7 @@ header img {
     flex-direction: row; 
     /* in mobile flex-direction: column */
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 12rem;
     
 }
 .about-me_text{
@@ -311,7 +335,6 @@ footer p {
         flex-direction: column;
         width: 100%;
         overflow-x: clip;
-        margin-top: 10rem;
     }
     .greeting-container {
         width: 100%;
@@ -352,9 +375,13 @@ footer p {
         animation: electric 3s infinite ease-out;
         margin-top: -25rem;
     }
+    .left-arm, .right-arm {
+        display: none;
+    }
 
     .about-me {
         flex-direction: column-reverse;
+        margin-top: 5rem;
         /* margin-top: 20rem; */
     }
 
