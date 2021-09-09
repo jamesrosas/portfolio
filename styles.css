@@ -94,7 +94,7 @@ header img {
     width: 100%;
     margin-top: 12rem;
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .presentation .greeting-container {
     width: 1fr;
@@ -364,6 +364,7 @@ footer p {
         justify-content: center;
         border: 1px solid red;
         margin-top: 5rem;
+        position: relative;
         /* display: none; puedo eliminar la animacion orignal de descktop y hacer una especialmente para mobile */
     }
     .round-light_mobile {
@@ -373,20 +374,47 @@ footer p {
         border-radius: 50%;
         background-color: var(--light-blue);
         animation: electric 3s infinite ease-out;
-        margin-top: -25rem;
+        /* margin-top: -25rem; */
+    }
+    .trigger-mobile {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+    }
+    .light-container_mobile img {
+        width: 270px;
     }
     .left-arm, .right-arm {
         display: none;
     }
+    .left-arm_mobile, .right-arm_mobile {
+        display: flex;
+        position: absolute;
+    }
+    .left-arm_mobile {
+        left: -7rem;
+        bottom: -6rem;
+        transform: rotate(-45deg);
+    }
+    .right-arm_mobile {
+        top: -6rem;
+        right: -7rem;
+        transform: rotate(-35deg);
+    }
 
     .about-me {
         flex-direction: column-reverse;
-        margin-top: 5rem;
-        /* margin-top: 20rem; */
+        margin-top: 19rem;
     }
 
     .about-me_photo {
         width: 100%;
+    }
+    .photo-box {
+        width: 85%;
     }
     .about-me_text {
         width: 95%;
@@ -416,6 +444,16 @@ footer p {
     }
     .the-profession {
         font-size: 3.5rem;
+    }
+
+    .trigger-mobile {
+        top: 6rem;
+    }
+
+    .left-arm_mobile {
+        left: -7rem;
+        bottom: -7rem;
+        transform: rotate(-50deg);
     }
 
 }
