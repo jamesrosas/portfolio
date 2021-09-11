@@ -27,6 +27,7 @@ html {
 body {
     background-color: var(--dark-blue);
     overflow-x: clip;
+    width: clamp(100%, 100%, 1000px);
 }
 
 /* main {
@@ -348,6 +349,90 @@ header img {
     font-weight: 400;
 }
 
+.cards-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: space-evenly;
+    margin-top: 3rem;
+}
+.card-project {
+    width: 300px;
+    height: 210px;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: black;
+    color: #ffff;
+    text-align: center;
+    transition: 350ms;
+    position: relative;
+}
+.card-project h3 {
+    font-family: var(--anton-font);
+    font-size: 22px;
+    font-weight: 400;
+}
+.card-project p {
+    font-family: var(--cabin-font);
+    font-size: 16px;
+}
+
+.leyend-container {
+    width: 98%;
+    height: 150px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+.leyend-container::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(128, 128, 128, 0.712);
+    border-radius: 5px;
+}
+.leyend-container::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: var(--light-blue);
+    border-radius: 5px;
+}
+.hover-view {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    right: -20rem;
+    top: -15rem;
+    border: 1px solid var(--light-blue);
+    border-radius: 10px;
+    display: none;
+    animation: appear 1s ease-in-out 1;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    } 
+}
+
+.hover-view video {
+    width: 100%;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card-project:hover , .hover-view:hover {
+    box-shadow: 0 0 5px var(--light-blue);
+}
+.card-project:hover .hover-view {
+    display: flex;
+}
+
 
 footer {
     width: 100%;
@@ -363,6 +448,7 @@ footer p {
     color: #ffff;
 }
 
+/*      VIEWPORT  500 PX  ******************************************************************************** */
 @media (max-width: 500px) {
 
     nav {
@@ -488,6 +574,7 @@ footer p {
     }
 }
 
+/*      VIEWPORT  400 PX  ******************************************************************************** */
 @media (max-width: 400px) {
 
     .text-animation {
