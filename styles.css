@@ -261,6 +261,29 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    /* border:  1px solid red; */
+}
+.about-me_photo .rrss {
+    width: 40px;
+    display: flex;
+    position: absolute;
+    top: 8rem;
+    right: 4rem;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.rrss svg {
+    margin-bottom: 2rem;
+    cursor: pointer;
+    opacity: 0;
+}
+.rrss svg path {
+    stroke: var(--light-blue);
+    stroke-width: 15px;
+    color: transparent;
 }
 .photo-box{
     width: 35rem;
@@ -283,6 +306,10 @@ header img {
     font-family: var(--anton-font);
     color: rgb(59, 59, 59);
     animation: parpadeo 1s infinite ;
+}
+
+.photo-box img {
+    width: 100%;
 }
 @keyframes parpadeo {
     from {
@@ -363,7 +390,7 @@ footer p {
         align-items: center;
         justify-content: center;
         border: 1px solid red;
-        margin-top: 5rem;
+        margin-top: 10rem;
         position: relative;
         /* display: none; puedo eliminar la animacion orignal de descktop y hacer una especialmente para mobile */
     }
@@ -412,9 +439,29 @@ footer p {
 
     .about-me_photo {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-me_photo .rrss {
+        flex-direction: row;
+        position: static;
+        display: flex;
+        width: 320px;
+        height: 60px;
+        align-items: center;
+        text-align: center;
+        margin: 2rem 1.5rem -4rem 1.5rem;
+    }
+    .rrss svg {
+        width: 35px;
+        margin: 0 2rem;
     }
     .photo-box {
-        width: 85%;
+        width: 80%;
+        height: 280px;
+    }
+    .photo-box::before{
+        left: 11rem;
     }
     .about-me_text {
         width: 95%;
@@ -454,6 +501,14 @@ footer p {
         left: -7rem;
         bottom: -7rem;
         transform: rotate(-50deg);
+    }
+
+    .photo-box {
+        width: 80%;
+        height: 250px;
+    }
+    .photo-box::before{
+        left: 9rem;
     }
 
 }

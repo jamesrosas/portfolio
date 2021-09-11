@@ -28,6 +28,9 @@ scrollFunction(".the-profession", 200, ".left-arm", moveLeftArm);
 const moveRightArm = {transform: "translateX(300px)", opacity: "0"};
 scrollFunction(".the-profession", 200, ".right-arm", moveRightArm);
 
+const showSocialNetworks = {opacity: "1"};
+scrollFunction(".about-me_photo", 20, ".rrss svg", showSocialNetworks);
+
 // mobile version from here ******************************************
 
 const lightBallMobile = {width: "1rem", transform: "translateY(320px)"};
