@@ -179,12 +179,14 @@ header img {
     right: 35rem;
     bottom: -11rem;
     transform: rotate(-35deg);
+    filter: drop-shadow(2px 2px 5px var(--light-blue));
 }
 .right-arm {
     position: absolute;
     right: -7rem;
     top: -11rem;
     transform: rotate(-35deg);
+    filter: drop-shadow(2px 2px 5px var(--light-blue));
 }
 
 .greeting-container, .light-container {
@@ -276,9 +278,17 @@ header img {
     /* border: 1px solid red; */
 }
 .rrss svg {
-    margin-bottom: 2rem;
     cursor: pointer;
     opacity: 0;
+    filter: drop-shadow(2px 2px 4px var(--light-blue));
+}
+.icon-container {
+    /* border: 1px solid red; */
+    margin-bottom: 2rem;
+    height: 3rem;
+}
+.icon-container:hover svg path {
+    color: var(--light-blue);
 }
 .rrss svg path {
     stroke: var(--light-blue);
@@ -420,6 +430,7 @@ footer p {
     .left-arm_mobile, .right-arm_mobile {
         display: flex;
         position: absolute;
+        filter: drop-shadow(2px 2px 5px var(--light-blue));
     }
     .left-arm_mobile {
         left: -7rem;
@@ -451,6 +462,11 @@ footer p {
         align-items: center;
         text-align: center;
         margin: 2rem 1.5rem -4rem 1.5rem;
+    }
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .rrss svg {
         width: 35px;
