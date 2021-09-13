@@ -357,7 +357,7 @@ header img {
     margin-top: 3rem;
 }
 .card-project {
-    width: 300px;
+    width: 350px;
     height: 210px;
     border: 1px solid cyan;
     border-radius: 10px;
@@ -431,6 +431,13 @@ iframe {
 }
 .card-project:hover .hover-view {
     display: flex;
+}
+#preview-text {
+    display: none;
+}
+
+.preview-modal {
+    display: none;
 }
 
 
@@ -571,6 +578,100 @@ footer p {
     }
     .inner-about {
         width: 85%;
+    }
+
+    .card-project {
+        width: 300px;
+        height: 350px;
+    }
+    .card-project p{
+        font-size: 18px;
+    }
+    .leyend-container {
+        height: 250px;
+    }
+    .card-project:hover .hover-view {
+        display: none;
+    }
+
+    #preview-text {
+        display: flex;
+        width: fit-content;
+        margin: 2rem auto;
+        font-family: var(--anton-font);
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--light-blue);
+    }
+
+    .preview-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 10rem;
+        right: 2rem;
+        /* left: -40rem; */
+        width: 90%;
+        height: 70%;
+        border: 2px solid var(--light-blue);
+        box-shadow: 0 0 5px var(--light-blue);
+        background: black;
+        border-radius: 10px;
+        padding: 1rem;  
+        /* transform: scale(0); */
+        transform: rotateX(-90deg);
+        transition: 350ms;
+    }
+    .show-modal {
+        /* left: 2rem;   */
+        /* transform: scale(1); */
+        transform: rotateX(0deg);
+    }
+    .close-icon {
+        color: white;
+        position: absolute;
+        font-family: var(--cabin-font);
+        font-size: 20px;
+        font-weight: 700;
+        top: 1rem;
+        right: 1rem;
+    }
+    .media-container {
+        width: 100%;
+        height: 85%;
+        border: 1px solid red;
+        overflow-y: auto;
+    }
+    .preview-modal h4 {
+        font-family: var(--anton-font);
+        font-size: 20px;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    .preview-modal a {
+        text-decoration: none;
+        font-family: var(--anton-font);
+        font-size: 20px;
+        color: var(--light-blue);
+        font-weight: 400;
+    }
+    .media-container::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgba(128, 128, 128, 0.712);
+        border-radius: 5px;
+    }
+    .media-container::-webkit-scrollbar-thumb {
+        width: 100%;
+        background: var(--light-blue);
+        border-radius: 5px;
+    }
+    .preview-modal p {
+        color: white;
+        font-size: 20px;
+
     }
 }
 
