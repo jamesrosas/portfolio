@@ -7,7 +7,7 @@ const scrollFunction = (trigger, time,  element, animation) => {
         duration: time
     })
         .setTween(element, 1 , animation)
-        // .addIndicators({name: "aqui (200ms)"})
+        .addIndicators({name: "aqui (200ms)"})
         .addTo(controller);
 }
 
@@ -31,6 +31,9 @@ scrollFunction(".the-profession", 200, ".right-arm", moveRightArm);
 const showSocialNetworks = {opacity: "1"};
 scrollFunction(".about-me_photo", 20, ".rrss svg", showSocialNetworks);
 
+const skillsBar = { width: "100%"};
+scrollFunction(".skills-container", 280, ".animate-bar", skillsBar);
+
 // mobile version from here ******************************************
 
 const lightBallMobile = {width: "1rem", transform: "translateY(320px)"};
@@ -41,4 +44,8 @@ scrollFunction(".trigger-mobile", 500, ".left-arm_mobile", moveLeftArmMobile);
 
 const moveRightArmMobile = {transform: "translateX(300px)", opacity: "0"};
 scrollFunction(".trigger-mobile", 500, ".right-arm_mobile", moveRightArmMobile);
+
+const skillsBarMobile = { height: "100%"};
+scrollFunction(".skills-container", 450, ".animate-bar_mobile", skillsBarMobile);
+
 
