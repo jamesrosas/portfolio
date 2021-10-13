@@ -11,6 +11,9 @@ const scrollFunction = (trigger, time,  element, animation) => {
         .addTo(controller);
 }
 
+const fragmentMove = {transform: "scale(0.2) rotate(180deg)"};
+scrollFunction(".glass-trigger", 240, ".fragment", fragmentMove);
+
 
 const lightBall = {width: "1rem", transform: "translateY(245px)"};
 scrollFunction(".the-profession", 240, ".round-light", lightBall);
