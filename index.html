@@ -18,9 +18,15 @@
         <div class="nav-container">
             <nav>
                 <ul>
-                    <li>Sobre mi</li>
-                    <li>Proyectos</li>
-                    <li>Contacto</li>
+                    <a href="#about">
+                        <li>Sobre mi</li>
+                    </a>
+                    <a href="#projects">
+                        <li>Proyectos</li>
+                    </a>
+                    <a>
+                        <li id="li-contact">Contacto</li>
+                    </a>
                 </ul>
             </nav>
         </div>
@@ -60,7 +66,8 @@
             <img class="left-arm" src="assets/images/left-arm.png" alt="developer creation"/>
             <img class="right-arm" src="assets/images/right-arm.png" alt="developer born"/>
         </section>
-        <article class="about-me">
+        <article  id="about" class="about-me">
+            <span class="light-photo_trigger"></span>
             <div class="about-me_text">
                 <div class="inner-about">
                     <h2>Sobre mi:</h2>
@@ -68,7 +75,7 @@
                     <p>Me gusta crear proyectos visualmente atractivos, que al mismo tiempo sean funcionales y brinden la mejor expericia posible para el usuario.</p>
                     <p>Todo el tiempo estoy en constante proceso creativo y en la mejora continua de mis habilidades. Así que si buscas darle vida a ese proyecto que tienes en mente cuenta conmigo, contacta me y contruyamos esa idea.</p>
                 </div>
-                <span class="light-photo_trigger"></span>
+                <!-- <span class="light-photo_trigger"></span> -->
             </div>
             <div class="about-me_photo">
                 <div class="photo-box">
@@ -110,38 +117,44 @@
             <h2>Soft Skills:</h2>
 
         </section>
-        <section class="projects-container">
+        <section id="projects" class="projects-container">
             <div class="section-title_container">
                 <h2>Projects:</h2>
                 <span class="back-text">Projects</span>
             </div>
             <div class="cards-container">
-                <div class="card-project">
+                <div class="card-project_container">
                     <h3>Black Sheep</h3>
-                    <div class="leyend-container">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsa tempore quam maxime aspernatur perferendis amet ea quidem, accusantium aperiam sapiente quos quis quod. Molestiae vero provident officiis illum dolorum?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus possimus, odio a, tenetur blanditiis est quas doloremque provident sit laboriosam itaque unde deserunt officia nulla perspiciatis nam ipsa earum aliquam!</p>
-                    </div>
-                    <p id="preview-text">Previsualizar</p>
-                    <a href="https://black-sheep.netlify.app/" target="_blank">
-                        <div class="hover-view">
-                            <video src="./assets/videos/color-lights.mp4" muted loop autoplay></video>
-                            <!-- <iframe src="https://black-sheep.netlify.app/" ></iframe> -->
+                    <div onclick="Play()" class="card-project">
+                        <div class="image-card">
+                            <img src="./assets/images/portada-blacksheep.jpg" alt="black sheep project"/>
+                            <video #card-video src="./assets/videos/black-sheep.mp4"autoplay loop muted ></video>
                         </div>
-                    </a>
+                        <p id="preview-text">Ver Detalles</p>
+                    </div> 
                 </div>
                 <div class="preview-modal">
                     <span class="close-icon">X</span>
                     <h4>Black Sheep</h4>
                     <!-- aqui iran el video y/o imagenes del proyecto -->
-                    <div class="media-container">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                    <div class="modal-container">
+                        <div class="media-container">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
+                        </div>
+                        <a href="https://black-sheep.netlify.app/" target="_blank">Vistar sitio</a>
                     </div>
-                    <a href="https://black-sheep.netlify.app/" target="_blank">Vistar sitio</a>
+                </div>
+                <div >
+
                 </div>
             </div>
         </section>
@@ -160,5 +173,6 @@
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="./scrollMagic.js"></script>
     <script src="modal.js"></script>
+    <script src="headerNav.js"></script>  
 </body>
 </html>

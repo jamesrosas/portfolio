@@ -43,6 +43,7 @@ main {
     width: 100%;
     max-width: 1263px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 
 h1 {
@@ -58,7 +59,10 @@ header {
     width: 100%;
     height: 80px;
     border-bottom: 1px solid #ffff;
-    z-index: 10;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    transition: 350ms;
 }
 
 header img {
@@ -90,7 +94,20 @@ header img {
     color: #ffff;
     font-family: var(--cabin-font);
     font-size: 1.8rem;
+    width: fit-content;
+    background: black;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 350ms;
 }
+.nav-container nav ul li:hover {
+    background: linear-gradient(45deg, cyan, #9100c5);
+}
+.nav-container nav ul a {
+    text-decoration: none;
+}
+
 
 .glass {
     width: 100vw;
@@ -122,11 +139,11 @@ header img {
     border-radius: 50%;
     border: 10px solid white;
     position: absolute;
-    top: -20rem;
+    top: -27rem;
     left: -20rem;
     box-shadow: 0px 0px 60px 20px cyan, inset 0px 0px 60px 10px cyan;
     animation: light-colors 10s infinite ease-in-out;
-
+    z-index: 10;
 }
 @keyframes light-colors {
     0% {
@@ -314,6 +331,7 @@ header img {
     /* in mobile flex-direction: column */
     width: 100%;
     margin-top: 12rem;
+    position: relative;
     
 }
 .about-me_text{
@@ -321,7 +339,7 @@ header img {
     background-color: var(--light-blue);
     color: #ffff;
     padding: 1.5rem;
-    position: relative;
+    /* position: relative; */
 }
 .light-photo_trigger{
     width: 10px;
@@ -499,52 +517,71 @@ header img {
     margin-top: 3rem;
 }
 
+.card-project_container {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid red;
+    position: relative;
+}
+
 .card-project {
     width: 350px;
-    height: 210px;
+    height: fit-content;
     border: 1px solid cyan;
     border-radius: 10px;
-    padding: 1rem;
+    /* padding: 1rem; */
     background-color: black;
     color: #ffff;
     text-align: center;
     transition: 350ms;
-    position: relative;
+    margin-top: 1rem;
+    overflow-x: hidden;
 }
-.card-project h3 {
+.card-project_container h3 {
     font-family: var(--anton-font);
     font-size: 22px;
     font-weight: 400;
+    width: fit-content;
+    padding: 0 1rem;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
 }
 .card-project p {
     font-family: var(--cabin-font);
     font-size: 16px;
 }
-
-.leyend-container {
-    width: 98%;
-    height: 150px;
-    /* border: 1px solid red; */
-    margin: 0 auto;
-    overflow-y: scroll;
-    padding-right: 5px;
-}
-.leyend-container::-webkit-scrollbar {
-    width: 5px;
-    background-color: rgba(128, 128, 128, 0.712);
-    border-radius: 5px;
-}
-.leyend-container::-webkit-scrollbar-thumb {
+.image-card{
     width: 100%;
-    background: var(--light-blue);
-    border-radius: 5px;
+    margin: 0 auto;
+    height: 200px;
+    background-color: white;
+    position: relative;
 }
+.image-card img, .image-card video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.image-card video{
+    z-index: 5;
+    opacity: 0;
+    transition: 350ms;
+}
+.card-project:hover .image-card video{
+    opacity: 1;
+}
+
+
 .hover-view {
     width: 250px;
     height: 200px;
     position: absolute;
     right: -20rem;
-    top: -15rem;
+    top: -10rem;
     border: 1px solid var(--light-blue);
     border-radius: 10px;
     display: none;
@@ -572,16 +609,116 @@ iframe {
 .card-project:hover , .hover-view:hover {
     box-shadow: 0 0 5px var(--light-blue);
 }
-.card-project:hover .hover-view {
+.card-project_container:hover .hover-view {
     display: flex;
 }
+
 #preview-text {
-    display: none;
+    display: flex;
+    width: fit-content;
+    margin: .5rem auto .5rem auto;
+    font-family: var(--anton-font);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--light-blue);
+    cursor: pointer;
 }
 
 .preview-modal {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 100%;
+    right: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100vh;
+    background: #000000bf;
+    padding: 1rem;  
+    /* transform: scale(0); */
+    transform: rotateX(-90deg);
+    transition: 350ms;
 }
+
+.modal-container{
+    width: 100%;
+    background-color: white;
+    border-radius: 25px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    top: 8rem;
+    display: grid;
+    grid-template: 90% 10% / 100vw;
+    grid-template-areas: "main"
+                         "title";
+    overflow: clip;
+    /* padding: 1rem; */
+    justify-content: center;
+}
+.show-modal {
+    top: 0;  
+    left: 0;
+    right: 0;
+    transform: rotateX(0deg);
+    z-index: 999;
+}
+.close-icon {
+    color: white;
+    position: absolute;
+    font-family: var(--cabin-font);
+    font-size: 25px;
+    font-weight: 700;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+.media-container {
+    width: 96%;
+    border: 1px solid red;
+    overflow-y: auto;
+    padding: 2rem 10rem;
+    grid-area: main;
+    margin: 0 auto;
+}
+
+.preview-modal h4 {
+    font-family: var(--anton-font);
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 3rem;
+}
+.preview-modal a {
+    text-decoration: none;
+    font-family: var(--anton-font);
+    font-size: 20px;
+    color: var(--light-blue);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: title;
+}
+.media-container::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(128, 128, 128, 0.712);
+    border-radius: 5px;
+}
+.media-container::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: var(--light-blue);
+    border-radius: 5px;
+}
+.preview-modal p {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+}
+
 
 
 footer {
@@ -602,14 +739,14 @@ footer p {
 @media (min-width: 1290px) {
 
     .glass-trigger{
-        bottom: 0;
+        bottom: -6rem;
     }
     .light-photo_trigger{
         width: 10px;
         height: 10px;
         background-color: white;
         position: absolute;
-        top: 5.3rem;
+        top: 13.5rem;
     }
     
 }
@@ -617,9 +754,35 @@ footer p {
 /*      VIEWPORT  500 PX  ******************************************************************************** */
 @media (max-width: 500px) {
 
-    nav {
+    .logo-container {
+        width: 64px;
+    }
+    .logo-container img {
+        left: 0;
+    }
+    .nav-container {
+        width: 85%;
+    }
+    .nav-container nav ul li {
+        margin: 0 0.5rem;
+        font-size: 1.7rem;
+    }
+    #li-contact{
+        background: linear-gradient(45deg, cyan, #9100c5);
+    }
+    .nav-container nav ul li:hover{
+        background: black;
+    }
+
+    .glass{
         display: none;
     }
+
+    main {
+        width: 100vw;
+        overflow-x: clip;
+    }
+    
     .light-ring {
         width: 800px;
         height: 800px;
@@ -627,7 +790,7 @@ footer p {
         border: 10px solid white;
         position: absolute;
         top: -20rem;
-        left: -40rem;
+        left: -50rem;
         box-shadow: 0px 0px 60px 20px cyan, inset 0px 0px 60px 20px cyan;
     }
    
@@ -666,7 +829,6 @@ footer p {
         border: 1px solid red;
         margin-top: 10rem;
         position: relative;
-        /* display: none; puedo eliminar la animacion orignal de descktop y hacer una especialmente para mobile */
     }
     .round-light_mobile {
         display: flex;
@@ -675,7 +837,6 @@ footer p {
         border-radius: 50%;
         background-color: var(--light-blue);
         animation: electric 3s infinite ease-out;
-        /* margin-top: -25rem; */
     }
     .trigger-mobile {
         width: 10px;
@@ -758,7 +919,7 @@ footer p {
         position: absolute;
         display: flex;
         top: 0;
-        width: 400px;
+        width: 100vw;
         height: 0;
         background-color: black;
         z-index: -1;
@@ -766,101 +927,39 @@ footer p {
 
     .card-project {
         width: 300px;
-        height: 350px;
     }
     .card-project p{
         font-size: 18px;
     }
-    .leyend-container {
-        height: 250px;
-    }
-    .card-project:hover .hover-view {
+    
+    
+    .card-project_container:hover .hover-view {
         display: none;
     }
 
-    #preview-text {
-        display: flex;
-        width: fit-content;
-        margin: 2rem auto;
-        font-family: var(--anton-font);
-        font-weight: 400;
-        font-size: 18px;
-        color: var(--light-blue);
-    }
-
-    .preview-modal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 10rem;
-        right: 2rem;
-        /* left: -40rem; */
-        width: 90%;
-        height: 70%;
-        border: 2px solid var(--light-blue);
-        box-shadow: 0 0 5px var(--light-blue);
-        background: black;
-        border-radius: 10px;
-        padding: 1rem;  
-        /* transform: scale(0); */
-        transform: rotateX(-90deg);
-        transition: 350ms;
-    }
-    .show-modal {
-        /* left: 2rem;   */
-        /* transform: scale(1); */
-        transform: rotateX(0deg);
-    }
-    .close-icon {
-        color: white;
-        position: absolute;
-        font-family: var(--cabin-font);
-        font-size: 20px;
-        font-weight: 700;
-        top: 1rem;
-        right: 1rem;
-    }
     .media-container {
-        width: 100%;
-        height: 85%;
+        width: 93%;
+        /* height: 80vh; */
         border: 1px solid red;
         overflow-y: auto;
+        padding: 2rem;
+        grid-area: main;
+        /* margin: 0 ; */
     }
-    .preview-modal h4 {
-        font-family: var(--anton-font);
-        font-size: 20px;
-        color: white;
-        font-weight: 400;
-        margin-bottom: 2rem;
+    .close-icon {
+        top: 2rem;
+        right: 2rem;
     }
-    .preview-modal a {
-        text-decoration: none;
-        font-family: var(--anton-font);
-        font-size: 20px;
-        color: var(--light-blue);
-        font-weight: 400;
-    }
-    .media-container::-webkit-scrollbar {
-        width: 5px;
-        background-color: rgba(128, 128, 128, 0.712);
-        border-radius: 5px;
-    }
-    .media-container::-webkit-scrollbar-thumb {
-        width: 100%;
-        background: var(--light-blue);
-        border-radius: 5px;
-    }
-    .preview-modal p {
-        color: white;
-        font-size: 20px;
-
-    }
+    
 }
 
 /*      VIEWPORT  400 PX  ******************************************************************************** */
 @media (max-width: 400px) {
+
+    .nav-container nav ul li {
+        margin: 0 0.2rem;
+        font-size: 1.7rem;
+    }
 
     .text-animation {
         width: 348px;

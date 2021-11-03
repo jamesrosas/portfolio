@@ -11,6 +11,9 @@ const scrollFunction = (trigger, time,  element, animation) => {
         .addTo(controller);
 }
 
+const blurHeaderNav = { backdropFilter: "blur(20px)"}
+scrollFunction(".glass-trigger", 10, "header", blurHeaderNav);
+
 const fragmentMove = {transform: "scale(0.2) rotate(180deg)"};
 scrollFunction(".glass-trigger", 240, ".fragment", fragmentMove);
 
