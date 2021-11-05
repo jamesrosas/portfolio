@@ -1,13 +1,15 @@
-const d = document;
-const PREVIEW = d.querySelector('#preview-text');
-const MODAL = d.querySelector('.preview-modal');
+
+const PREVIEW = document.querySelector('#preview-text');
+const MODAL_DETAILS = document.querySelector('.preview-modal');
 
 PREVIEW.addEventListener('click', () => {
-    MODAL.classList.add('show-modal');
+    MODAL_DETAILS.classList.add('show-modal');
 })
 
-const CLOSE_ICON = d.querySelector('.close-icon');
+const CLOSE_ICON = document.querySelector('.close-icon');
 
 CLOSE_ICON.addEventListener('click', () => {
-    MODAL.classList.remove('show-modal');
+    MODAL_DETAILS.classList.remove('show-modal');
 })
+
+

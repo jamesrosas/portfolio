@@ -719,6 +719,195 @@ iframe {
 
 }
 
+/* **** contact Form */
+.form-section{
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    width: 80%;
+    padding: 1.5rem;
+    margin: 5rem auto;
+    border: 1px solid red;
+}
+
+.form-section h2 {
+    color: #ffff;
+    font-family: var(--anton-font);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.form-section form {
+    width: 80%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.form-section form input, .form-section form textarea{
+    width: 370px;
+    font-family: var(--cabin-font);
+    font-size: 1.8rem;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid cyan;
+    outline-color: cyan;
+    caret-color: cyan;
+    /* background: #0000005e; */
+    background: linear-gradient(60deg,#0000005e 70%, #00ffff33);
+    backdrop-filter: blur(2px);
+}
+.form-section form input:hover, .form-section form textarea:hover{
+    box-shadow: 0 0 8px 1px cyan;
+}
+
+
+#send-mail{
+    width: fit-content;
+    font-family: var(--cabin-font);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-top: 2rem;
+    color: #ffffff;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 5;
+    border: none;
+    transition: 350ms;
+}
+#send-mail:hover{
+    background: linear-gradient(45deg, cyan, #9100c5);
+}
+
+.modal-sent_container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: none;
+}
+
+.modal-sent{
+    width: 250px;
+    height: 200px;
+    background: linear-gradient(45deg, #00f0ff, #181747);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -30rem; */
+    z-index: 10;
+    box-shadow: 0px 0px 8px 1px cyan;
+    border: 2px solid cyan;
+    backdrop-filter: blur(8px);
+    display: flex;
+}
+
+.check-container{
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+}
+
+.check {
+    width: 50px;
+    height: 50px;
+    margin-top: 3rem;
+    color: black;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    padding: 0 10px;
+    border-bottom: 2px solid white;
+    transform: rotate(329deg);
+    position: relative;
+}
+span.check::after {
+    content: "";
+    width: 48px;
+    height: 3px;
+    background: white;
+    color: white;
+    transform: rotate(159deg);
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    /* animation: check 1s infinite ease-in; */
+}
+span.check::before {
+    content: "";
+    width: 12px;
+    height: 3px;
+    background: white;
+    color: white;
+    transform: rotate(257deg);
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+}
+
+#p-modal {
+    font-family: var(--cabin-font);
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    font-weight: 600;
+}
+
+.modal-show {
+    display: flex;
+    animation: show 1s forwards 1; 
+}
+
+.modal-hide {
+    display: none;
+}
+
+#loader {
+    width: 50px;
+    height: 50px;
+    border: 2px solid cyan;
+    border-left: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-top: 3rem;
+    animation: rotate  500ms infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ++++++++++++++++++++ */
 
 
 footer {
@@ -949,6 +1138,15 @@ footer p {
     .close-icon {
         top: 2rem;
         right: 2rem;
+    }
+
+    .form-section form {
+        width: 100%;
+    }
+
+    .form-section form input , .form-section form textarea{
+        width: 100%;
+        margin: .5rem 0;
     }
     
 }
