@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hola soy james desarrollador frontend, ingresa a mi web y conoce mi portafolio">
     <meta name="canonical" href="https://jamesrosas.dev" >
-    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="icon" href="./assets/images/portfolio-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
     <title>James Developer</title>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="./assets/images/logo-portfolio.png" alt="logo james developer" />
+            <img src="./assets/images/portfolio-logo.png" alt="logo james developer" />
         </div>
         <div class="nav-container">
             <nav>
@@ -24,7 +24,7 @@
                     <a href="#projects">
                         <li>Proyectos</li>
                     </a>
-                    <a>
+                    <a href="#contact-me">
                         <li id="li-contact">Contacto</li>
                     </a>
                 </ul>
@@ -44,11 +44,12 @@
         <section class="presentation">
             <div class="greeting-container">
                 <h1>
-                    <p class="small-font">Hola, soy</p>
+                    <!-- <p class="small-font">Hola, soy</p> -->
                     <div class="text-animation">
                         <video src="./assets/videos/color-lights.mp4" autoplay loop muted>      
                         </video>
-                        <p class="the-name">James</p>                
+                        <p class="the-name">James</p>
+                        <p class="small-font">Hola, soy</p>              
                     </div>
                     <p class="the-profession">Front-end Developer</p>
                 </h1>
@@ -60,6 +61,7 @@
             <div class="light-container_mobile">
                 <span class="trigger-mobile"></span>
                 <span class="round-light_mobile"></span>
+                <span class="round-light_tablet"></span>
                 <img class="left-arm_mobile" src="assets/images/left-arm.png" alt="developer creation"/>
                 <img class="right-arm_mobile" src="assets/images/right-arm.png" alt="developer born"/>    
             </div>
@@ -71,15 +73,19 @@
             <div class="about-me_text">
                 <div class="inner-about">
                     <h2>Sobre mi:</h2>
-                    <p>Soy un apasionado por el arte y la tecnología. Y en esa busqueda constante por combinar ambas pasiones descubrí el desarrollo web.</p>
+                    <p>Soy un apasionado por el arte digital y la tecnología. Y en esa busqueda constante por combinar ambas pasiones descubrí el desarrollo web.</p>
                     <p>Me gusta crear proyectos visualmente atractivos, que al mismo tiempo sean funcionales y brinden la mejor expericia posible para el usuario.</p>
-                    <p>Todo el tiempo estoy en constante proceso creativo y en la mejora continua de mis habilidades. Así que si buscas darle vida a ese proyecto que tienes en mente cuenta conmigo, contacta me y contruyamos esa idea.</p>
+                    <p>Todo el tiempo estoy en constante proceso creativo y en la mejora continua de mis habilidades. Así que si buscas darle vida a ese proyecto que tienes en mente cuenta conmigo, contactáctame y contruyamos esa idea.</p>
                 </div>
                 <!-- <span class="light-photo_trigger"></span> -->
             </div>
             <div class="about-me_photo">
-                <div class="photo-box">
-                    <img src="https://images.unsplash.com/photo-1620754441901-c14bbe034491?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGV4ZWN1dGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" width="350" alt="james rosas frontend developer"/>
+                <div class="avatar-container">
+                    <div class="photo-box">
+                        <video id="interference-video" src="./assets/videos/vintage-tv.mp4" autoplay loop muted></video>
+                        <img src="https://images.unsplash.com/photo-1620754441901-c14bbe034491?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGV4ZWN1dGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" width="350" alt="james rosas frontend developer"/>
+                    </div>
+                    <img class="marco-photo" src="./assets/images/frame-cyber.png" />
                 </div>
                 <div class="rrss">
                     <div class="icon-container">
@@ -97,6 +103,9 @@
                 </div>
             </div>
         </article>
+        <div>
+            <a href="./resume/diploma-nfts.pdf" target="_blank" id="curriculum">Descargar CV</a>
+        </div>
         <section class="skills-container">
             <div class="section-title_container">
                 <h2>Skills:</h2>
@@ -111,10 +120,12 @@
                 <span class="iconify" data-icon="cib:js"></span>
                 <span class="iconify" data-icon="akar-icons:react-fill"></span>
                 <span class="iconify" data-icon="akar-icons:gatsby-fill"></span>
-                <p>SEO</p>
+                <span id="seo-icon">SEO</span>
                 <span class="iconify" data-icon="cib:adobe-photoshop"></span>
             </div>
             <h2>Soft Skills:</h2>
+            <p>Buen trabajo en equipo, cooperativo y dispuesto a ayudar.</p>
+            <p>bueno gestionando el tiempo, por ende organizado y puntual.</p>
 
         </section>
         <section id="projects" class="projects-container">
@@ -128,40 +139,87 @@
                     <div class="card-project">
                         <div class="image-card">
                             <img src="./assets/images/portada-blacksheep.jpg" alt="black sheep project"/>
-                            <video #card-video src="./assets/videos/black-sheep.mp4"autoplay loop muted ></video>
+                            <video #card-video src="./assets/videos/BS-video-review.mp4"autoplay loop muted ></video>
                         </div>
-                        <p id="preview-text">Ver Detalles</p>
+                        <p class="preview-text">Ver Detalles</p>
                     </div> 
                 </div>
                 <div class="preview-modal">
                     <span class="close-icon">X</span>
                     <h4>Black Sheep</h4>
                     <div class="modal-container">
-                        <div class="media-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, delectus vel? Aperiam, laboriosam dolores pariatur corrupti hic ducimus laudantium voluptates veritatis nam velit facilis omnis, placeat cum praesentium rem vitae.</p>
-                        </div>
+                        <article class="media-container">
+                            <p>Black sheep es un ecommerce , que busca darse a conocer con una identidad fresca y original, lo cual busque plasmar con la UI de toda la web desde su página home , sus páginas de categorias tanto para mujer y hombre, las páginas de detalle de cada producto hasta el carrito de compras.</p>
+                            <div class="video-review_container">
+                                <h3>video review</h3>
+                                <video src="./assets/videos/BS-video-review.mp4" controls muted ></video>
+                            </div>
+                            <p>Para este proyecto hice uso de <strong>Gatsby.js</strong> para de esta manera servir páginas estáticas al browser, de manera que así el performance hablando de <strong>SEO</strong> sea mucho mejor, ya que de esta manera entregamos el html listo de todo lo que hay en la web para que así google pueda crawlear nuestra web de manera más eficiente y fácil, y que gracias a esto nuestra web con el tiempo pueda ocupar cada vez mejores posiciones en las SERPS.</p>
+                            <p>De manera entonces que para mejorar el SEO , me centre en primer lugar en mejorar los tiempos de carga, para lo cual tuve en cuenta;</p>
+                            <ul>
+                                <li>Servir páginas estáticas para agilizar el renderizado de la web y el crawleo por parte de Google.</li>
+                                <li>Comprimir todo lo posible el peso de las imagenes sin que esto significase perder calidad.</li>
+                                <li>Gracias al uso en conjunto de Gatsby.js y React.js hacer de la web una <strong>Single Page Aplication</strong>, para que al navegar entre paginas este proceso sea practicamente instantaneo.</li>
+                            </ul>
+                            <p>En segundo lugar para mejorar el SEO hice uso del tag head (componente <strong>Seo</strong> en Gatsby.js) en cada página de la web para así personalizar los <strong>titles</strong> ,los <strong>metatitles</strong> y <strong>metadescriptions</strong> de cada página para que estos correspondieran y su información fueran coherentes con lo que se muestra en la página en cuestión</p>
+                            <p>De esta manera estamos logrando que estos metatitulos y descripciones que aparecerán en las SERPS sean mucho mas semánticos y claros para con Google con respecto al contenido de cada una de las páginas de nuestro Ecommerce. Para el copywrite de cada metadato se hizo un benchmarking del sector para de esta manera tener una idea clara de las keywords por las cuales quiero que la web se posicione.</p>
+                            <p>Black sheep cuenta con <strong>Stripe </strong>completamente integrado como pasarela de pagos(en este caso hacemos uso de Stripe en modo prueba porque Black Sheep es solo un MVP y no es un tienda real de momento). De manera que la web cuenta con metodos de pago completamente funcionales.</p>
+                            <p>Además es en Stripe donde subimos todos los datos de los productos de Black Sheep, como sus imagenes , títulos , descripciones, y tambien donde fijamos el precio de cada artículo.</p>
+                            <p>Todos los artículos del ecommerce son diseños propios realizados en el software de diseño Photoshop.</p>
+                            <p>Gracias al uso de <strong>GraphQl</strong> en Gatsby.js es que podemos servir los datos de todos los productos que se encuentran en blacksheep, ya que es por medio de GraphQl que nos conectamos a la <strong>API de Stripe</strong> (para hacer esto posible es necesario hacer la instalacion del plugin de stripe para conectarlo con GraphQl) , y de esta manera conectamos Stripe a través de GrapQL para servir todos los productos a Black Sheep.</p>
+                            <p>Además de lo anterior , tambien hacemos uso de los métodos que contiene Stripe para hacer el proceso de checkout al comprar los productos.</p>
+                        </article>
                         <a href="https://black-sheep.netlify.app/" target="_blank">Vistar sitio</a>
                     </div>
                 </div>
-                <div >
-
+                <!-- desde aqui card de social-net -->
+                <div class="card-project_container">
+                    <h3>Social Net</h3>
+                    <div class="card-project">
+                        <div class="image-card">
+                            <img src="./assets/images/socialnet-thumbnail.jpg" alt="social net project"/>
+                            <video #card-video src="./assets/videos/social-net-video-review.mp4" autoplay loop muted ></video>
+                        </div>
+                        <p class="preview-text2">Ver Detalles</p>
+                    </div> 
                 </div>
+                <div class="preview-modal2">
+                    <span class="close-icon2">X</span>
+                    <h4>Social Net</h4>
+                    <div class="modal-container">
+                        <div class="media-container">
+                            <p>Este proyecto se puede considerar como un modesto clon de twitter, para el cual hicimos uso de un paradigma que últimamente esta en tendencia en varias startups y es el de <strong>"mobile only"</strong> de manera que su UI y UX está construida especificamente para mobile, aunque en este caso de todas formas haya un pseudoversión para escritorio en la que se visulizará la app en un layout vertical el cual simulará la pantalla y/o viewport de un smartphone.</p>
+                            <div class="video-review_container">
+                                <h3>video review</h3>
+                                <video src="./assets/videos/social-net-video-review.mp4" controls muted ></video>
+                            </div>
+                            <p>Este proyecto basa todo su backend en el <strong>backend as a service que nos proporciona firebase</strong>, y es gracias a este backend de firebase que podemos hacer uso de su de base de datos no relacional, así como de su storage para subir archivos como lo podrían ser imágenes y videos, y también de su sistema de autenticación.</p>
+                            <p>Social-net esta construido con <strong>Next.js</strong>, el cual es el framework de React.js para trabajar del lado del servidor, de manera que podamos hacer uso de sus diferentes tipos de render ya sea <strong>CSR</strong> (Client Side Rendering) , <strong>SSR</strong> (Server Side Rendering), <strong>SSG</strong> (Static Side Generation) y/o <strong>ISR</strong> (Incremental Static Regeneration), lo cual podemos definir en cada page de nuestra aplicación a través de  métodos que nos proporciona Next.js como lo son <strong>getStaticProps </strong>junto con <strong>getStaticPaths</strong>, o haciendo uso de <strong>getServerSideProps</strong>, o simplemente renderizando en el cliente con un useEffect de React.js, también podemos hacer una combinación de estos utilizando diferentes métodos para cada page, esto  según los objetivos que persigamos para con nuestra app.</p>
+                            <p>Así las cosas ,  para la sección principal de <strong>login</strong>, habilitamos en firebase los servicios de <strong>GitHub</strong> y de <strong>Google </strong>para que el usuario se pueda dar de alta en la aplicación con cualquiera de estos dos <strong>métodos de autenticación</strong>. En cuanto a la UI podemos encontrar el logo animado de la aplicación construido desde cero con css  (haciendo uso del tag style jsx que ya nos ofrece Next.js), y también podemos observar los botones de login con un diseño un tanto minimalista.</p>
+                            <p>Una vez autenticados, el usuario es redirigido a la sección del <strong>timeline</strong> en la home donde podrá visualizar todos los comentarios que los demás usuarios de la App han creado y/o publicado.</p>
+                            <p>En la sección de la home también encontramos un header, el cual posee un botón para hacer <strong>logout</strong> de la aplicación.</p>
+                            <p>Además de este header tenemos una nav-bar en el footer en la cual tenemos un icono con forma de nota, la cual cual redirige al usuario hacia la sección donde podrá escribir lo que quiera publicar al hacer clic en el botón de "Nettear", Nettear porque denomine a cada una de las publicaciones como un Nett, asi como Twitter por su parte los denomina tuit.</p>
+                            <p> Una vez publicado dicho Nett, aparecerá de manera casi que instantánea en el timeline de la home , de manera que cualquier usuario que este visualizando el timeline de la home pueda ver dicho comentario <strong>en tiempo real</strong> y al instante de que este haya sido creado.</p>
+                            <p> En esta sección el usuario también puede <strong>subir una imagen haciendo uso del método de Drag and Drop</strong> dentro de la sección donde se escribe el Nett (debido a que dicho evento no esta disponible en móviles esta opción solo funciona de momento desde una laptop u ordenador desktop).</p>
+                            <p>En la page del timeline de la home , estamos haciendo uso de un <strong>renderizado del lado del cliente</strong> a través del hook useEffect de React , esto porque necesitamos que esta sección sea lo mas dinámica posible debido a que estará pendiente a cada comentario que se publique para que este se pueda mostrar en tiempo real, por tanto con useEffect podemos escuchar cada uno de los datos que se van adicionando a nuestra DB y asi mostrarlos al instante.</p>
+                            <p>En cuanto a la UI de cada uno de los Netts que se visualizan en el timeline de la home podemos ver que este se compone por la foto de perfil del usuario , y su nombre los cuales tomamos de la plataforma con la cual se dio de alta el usuario ya sea GitHub o su cuenta de Google, también podemos ver al costado derecho del nombre del usuario que encontramos un <strong>timestamp</strong> el cual nos indica hace cuanto se publico el Nett, y por último por supuesto también podemos observar el contenido o comentario del Nett en cuestión.</p>
+                            <p>También hacemos uso de las <strong>rutas dinámicas en Next.js</strong> , para que con esto podamos mostrar de manera individual cada Nett al que el usuario le de clic.</p>
+                            <p>Para el renderizado de cada una estas páginas de detalle hicimos uso de un <strong>renderizado del tipo estático</strong>, esto a través de getStaticprops en combinación con getStaticPaths para que dichas rutas se generasen de manera dinámica sin tener que especificar cada una de ellas manualmente.</p>
+                            <p> Y el porqué, de que cada pagina de detalles de cada Nett sea estática es porque se busca que cada uno de los Netts que se publican sean fácilmente indexados y crawleados por las spiders de Google, de manera que todo aquello que se publique en la app pueda llegar a posicionarse en motores de búsqueda, y así por ende mejorar el SEO de la app.</p>
+                            <p>Ya que lo que se busca en un principio cuando una app es nueva es atraer el mayor tráfico posible, y aunque el SEO es una estrategia que toma tiempo y no es tan inmediata como aplicar SEM, con el tiempo dicha estrategia será mucho mejor porque todo el tráfico que reciba será de manera orgánica por lo cual es algo más sostenible, y con lo cual en un futuro sería también provechoso mostrar anuncios en nuestra app, ya que una vez posicionados en el sector al que apuntemos habrán empresas y/o personas interesadas en pautar en nuestra app.</p>
+                            <p>También desde la consola de firebase establecimos algunas <strong>reglas de seguridad </strong>para que el usuario solamente pueda ingresar a las secciones de timeline de la home y la de crear un Nett, solamente si esta esta autenticado, de lo contrario si el usuario intenta ingresar a la url de dichas secciones sin estar autenticado sera redirigido automáticamente al sección de login</p>
+                        </div>
+                        <a href="https://social-net-phi.vercel.app/" target="_blank">Vistar sitio</a>
+                    </div>
+                
             </div>
         </section>
-        <section class="form-section">
+        <section id="contact-me" class="form-section">
             <div class="section-title_container">
                 <h2>Contacto:</h2>
                 <span class="back-text">Contacto</span>
             </div>
+            <p>Cuéntame sobre tu idea y/o proyecto, y llevémoslo a cabo :)</p>
             <form id="contact-form" action="https://formsubmit.co/ajax/ea4c9daa5875af90f47bf9c9945bc8b1" method="POST">
                 <input type="hidden" name="_template" value="table">
                 <input type="text" name="name" placeholder="Tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
@@ -174,6 +232,9 @@
            </div>
         </section>
     </main>
+    <div class="blur-circle_container">
+        <span class="blur-circle"></span>
+    </div>
     <footer>
         <p>Diseñado y desarrollado por James Rosas</p>
     </footer>

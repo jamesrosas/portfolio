@@ -25,6 +25,9 @@ const lightPhoto = {animation: "electric 5s infinite ease-out"};
 const lightPhoto2 = {boxShadow: "0 0 12px cyan, 0 0 24px cyan", border: "2px solid white"};
 scrollFunction(".light-photo_trigger", 20, ".photo-box", lightPhoto2);
 
+const cyberFrame = { filter: "drop-shadow(0 0 5px cyan)" }
+scrollFunction(".light-photo_trigger", 40, ".marco-photo", cyberFrame);
+
 const showPhoto = {opacity: "1", zIndex: "12"};
 scrollFunction(".light-photo_trigger", 20, ".photo-box img", showPhoto);
 
@@ -40,10 +43,16 @@ scrollFunction(".light-photo_trigger", 20, ".rrss svg", showSocialNetworks);
 const skillsBar = { width: "100%"};
 scrollFunction(".skills-container", 280, ".animate-bar", skillsBar);
 
+// tablet version from here ******************************************
+
+const lightBallTablet = {width: "1rem", transform: "translateY(490px)"};
+scrollFunction(".trigger-mobile", 550, ".round-light_tablet", lightBallTablet);
+
 // mobile version from here ******************************************
 
 const lightBallMobile = {width: "1rem", transform: "translateY(320px)"};
 scrollFunction(".trigger-mobile", 550, ".round-light_mobile", lightBallMobile);
+
 
 const moveLeftArmMobile = {transform: "translateX(-300px)", opacity: "0"};
 scrollFunction(".trigger-mobile", 500, ".left-arm_mobile", moveLeftArmMobile);
