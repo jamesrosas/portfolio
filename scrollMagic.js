@@ -63,4 +63,7 @@ scrollFunction(".trigger-mobile", 500, ".right-arm_mobile", moveRightArmMobile);
 const skillsBarMobile = { height: "100%"};
 scrollFunction(".skills-container", 450, ".animate-bar_mobile", skillsBarMobile);
 
+const toolsBarMobile = { height: "100%"};
+scrollFunction("#tools", 450, ".animate-bar_mobile2", toolsBarMobile);
+
 
