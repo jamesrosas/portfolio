@@ -154,7 +154,54 @@
                                 <h3>video review</h3>
                                 <video src="./assets/videos/BS-video-review.mp4" controls muted ></video>
                             </div>
-                            <p>Para este proyecto hice uso de <strong>Gatsby.js</strong> para de esta manera servir páginas estáticas al browser, de manera que así el performance hablando de <strong>SEO</strong> sea mucho mejor, ya que de esta manera entregamos el html listo de todo lo que hay en la web para que así google pueda crawlear nuestra web de manera más eficiente y fácil, y que gracias a esto nuestra web con el tiempo pueda ocupar cada vez mejores posiciones en las SERPS.</p>
+                            <h2>Estructura del e-commerce</h2>
+                            <h3>Home</h3>
+                            <p>Nuestro e-commerce se compone por una pagina home donde podemos apreciar una  header navbar , la cual estará presente en todas las paginas del e-commerce y desde la cual podemos acceder a las categorías de  mujer y hombre, y también a nuestro carrito de compras. Además de esto en el propio contenido de la home también podemos ver los clusters con imágenes para las categorías de hombre y mujer, desde los cuales podemos acceder a dichas categorías de una manera mas inmediata e intuitiva.</p>
+                            <!-- aqui va la imagen de la home -->
+                            <div class="project-screenshots_container">
+                                <img class="img-desktop_version" src="./assets/images/home-desktop.png" alt="pagina home de black sheep ecommerce"/>
+                                <img class="img-mobile_version" src="./assets/images/home-mobile.png" alt="pagina home de black sheep version mobile"/>
+                            </div>
+                            <h3>Categorías</h3>
+                            <p>En cada pagina de categoría podemos ver un hero representativo con una imagen de la categoría correspondiente, y en su contenido su correspondiente lista de productos , los cuales se conforman por la imagen del producto, su nombre, su precio y su respectivo link que va hacia su vista de detalles.</p>
+                            <!-- aqui va la imagen de categoria for him -->
+                            <div class="project-screenshots_container">
+                                <img class="img-desktop_version" src="./assets/images/category-desktop.png" alt="pagina de categoria"/>
+                                <img class="img-mobile_version" src="./assets/images/category-mobile.png" alt="pagina de categoria version mobile"/>
+                            </div>
+                            <p>Todos los artículos del e-commerce son diseños propios realizados en el software de diseño Photoshop.</p>
+                            <h3>Página de detalles</h3>
+                            <p>Una vez en la pagina de detalles del producto seleccionado , podremos apreciar la imagen del producto de una manera mas detallada, también con su nombre, y precio, y esta vez además con una pequeña descripción del producto , un rating de estrellas para que el usuario califique el producto, la opción para escoger la cantidad de unidades del producto la cual hará que el precio se incremente en tiempo real según dicha cantidad, una lista de tallas para escoger , y por ultimo el botón de “add to cart” para agregar el producto a nuestro carrito de compras, el cual no funcionara si antes no hemos elegido una talla. </p>
+                            <!-- aqui va la imagen de la vista de detalles -->
+                            <div class="project-screenshots_container">
+                                <img class="img-desktop_version" src="./assets/images/product-details-desktop.png" alt="pagina de detalles del producto"/>
+                                <img class="img-mobile_version" src="./assets/images/product-details-mobile.png" alt="pagina de categoria version mobile"/>
+                            </div>
+                            <h3>Carrito de compras</h3>
+                            <p>El carrito de compras, como sabemos su función es la de almacenar cada uno de los productos que el usuario va agregando conforme navega por la web, aquí podemos apreciar cada uno de los productos con su imagen, nombre, precio total según el numero de unidades, su talla, la cantidad de unidades de dicho producto que agrego el usuario, también si el usuario agrego mas de una unidad del producto en cuestión aparecerá un pequeño mensaje indicando el precio unitario del producto, y también la card del producto posee un pequeño icono de “x” en la esquina superior derecha para eliminar el producto del carrito.</p>
+                            <p>Como dato curioso del carrito, hice que cuando el carrito se abriera , en todo el resto de la web se invirtieran los colores, lo cual a mi parecer crea un efecto cool y divertido para el usuario a la hora de abrir y cerrar el carrito. Aunado a esta idea el carrito se puede cerrar ya sea dando click en el icono de “x” que tiene en su parte superior izquierda , o también se puede cerrar haciendo click en cualquier otro lugar de la web que no sea el carrito.</p>
+                            <!-- aqui va la imagen del carrito -->
+                            <div class="project-screenshots_container">
+                                <img class="img-desktop_version" src="./assets/images/car-desktop.png" alt="carrito de compras en desktop"/>
+                                <img class="img-mobile_version" src="./assets/images/car-mobile.png" alt="carrito de compras version mobile"/>
+                            </div>
+                            <p>Por ultimo en el footer del carrito , tenemos la casilla que nos mostrara el valor total haciendo la suma de todos los productos del carrito, valor que se actualizara en tiempo real si por ejemplo eliminamos alguno de los productos , y por supuesto podemos apreciar un botón que dice “go to pay” para así proceder con stripe como pasarela de pagos para efectuar el pago correspondiente de la compra.</p>
+                            <!-- aqui va la imagen del checkout de stripe -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/stripe-checkout.png" alt="pagina de checkout con stripe"/>
+                            </div>
+                            <p>Aunado a lo anterior, si la compra fue exitosa , redirigiremos al usuario a una pagina de la web donde le damos las gracias por su compra , y le mostramos un botón para ir a la home del e-commerce</p>
+                            <!-- aqui va la imagen de cuando la compra es exitosa -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/success-buy.png" alt="pagina de compra exitosa"/>
+                            </div>
+                            <p>si por el contrario el usuario cancela la compra, lo redirigiremos a una pagina de la web donde le decimos “ ” y también le mostramos un botón para ir a la home del e-commerce.</p>
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/canceled-buy.png" alt="pagina de compra cancelada"/>
+                            </div>
+                            <!-- aqui va la imagen de cuando la compra es cancelada -->
+                            <h2>Seoptimizado</h2>
+                            <p>Para este proyecto hice uso de <strong>Gatsby.js</strong> para de esta manera servir páginas estáticas al browser, de manera que así el performance hablando de <strong>SEO</strong> sea mucho mejor, ya que de esta manera entregamos el html listo de todo lo que hay en la web para que así Google pueda crawlear nuestra web de manera más eficiente y fácil, y que gracias a esto nuestra web con el tiempo pueda ocupar cada vez mejores posiciones en las SERPS.</p>
                             <p>De manera entonces que para mejorar el SEO , me centre en primer lugar en mejorar los tiempos de carga, para lo cual tuve en cuenta;</p>
                             <ul>
                                 <li>Servir páginas estáticas para agilizar el renderizado de la web y el crawleo por parte de Google.</li>
@@ -163,11 +210,16 @@
                             </ul>
                             <p>En segundo lugar para mejorar el SEO hice uso del tag head (componente <strong>Seo</strong> en Gatsby.js) en cada página de la web para así personalizar los <strong>titles</strong> ,los <strong>metatitles</strong> y <strong>metadescriptions</strong> de cada página para que estos correspondieran y su información fueran coherentes con lo que se muestra en la página en cuestión</p>
                             <p>De esta manera estamos logrando que estos metatitulos y descripciones que aparecerán en las SERPS sean mucho mas semánticos y claros para con Google con respecto al contenido de cada una de las páginas de nuestro Ecommerce. Para el copywrite de cada metadato se hizo un benchmarking del sector para de esta manera tener una idea clara de las keywords por las cuales quiero que la web se posicione.</p>
+                            <h2>Pasarela de pagos</h2>
                             <p>Black sheep cuenta con <strong>Stripe </strong>completamente integrado como pasarela de pagos(en este caso hacemos uso de Stripe en modo prueba porque Black Sheep es solo un MVP y no es un tienda real de momento). De manera que la web cuenta con metodos de pago completamente funcionales.</p>
                             <p>Además es en Stripe donde subimos todos los datos de los productos de Black Sheep, como sus imagenes , títulos , descripciones, y tambien donde fijamos el precio de cada artículo.</p>
-                            <p>Todos los artículos del ecommerce son diseños propios realizados en el software de diseño Photoshop.</p>
-                            <p>Gracias al uso de <strong>GraphQl</strong> en Gatsby.js es que podemos servir los datos de todos los productos que se encuentran en blacksheep, ya que es por medio de GraphQl que nos conectamos a la <strong>API de Stripe</strong> (para hacer esto posible es necesario hacer la instalacion del plugin de stripe para conectarlo con GraphQl) , y de esta manera conectamos Stripe a través de GrapQL para servir todos los productos a Black Sheep.</p>
-                            <p>Además de lo anterior , tambien hacemos uso de los métodos que contiene Stripe para hacer el proceso de checkout al comprar los productos.</p>
+                            <!-- aqui va la imagen del dashborad de productos en stripe -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/products-dashboard-stripe.png" alt="dashboard de productos en la plataforma de stripe"/>
+                            </div>
+                            <p>Gracias al uso de <strong>GraphQl</strong> en Gatsby.js es que podemos servir los datos de todos los productos que se encuentran en blacksheep, ya que es por medio de GraphQl que nos conectamos a la <strong>API de Stripe</strong> (para hacer esto posible es necesario hacer la instalación del plugin de stripe para conectarlo con GraphQl) , y de esta manera conectamos Stripe a través de GrapQL para servir todos los productos a Black Sheep.</p>
+                            <h2>Mobile first</h2>
+                            <p>No esta de mas mencionar, que black sheep es una web totalmente responsive, la cual se basa en el principio de mobile First, por tanto es perfectamente adaptable para un viewport en mobile y también por supuesto existe una versión para desktop.</p>
                         </article>
                         <a href="https://black-sheep.netlify.app/" target="_blank">Vistar sitio</a>
                     </div>
@@ -188,26 +240,85 @@
                     <h4>Social Net</h4>
                     <div class="modal-container">
                         <div class="media-container">
-                            <p>Este proyecto se puede considerar como un modesto clon de twitter, para el cual hicimos uso de un paradigma que últimamente esta en tendencia en varias startups y es el de <strong>"mobile only"</strong> de manera que su UI y UX está construida especificamente para mobile, aunque en este caso de todas formas haya un pseudoversión para escritorio en la que se visulizará la app en un layout vertical el cual simulará la pantalla y/o viewport de un smartphone.</p>
+                            <p>Este proyecto se puede considerar como un modesto clon de twitter, para el cual hicimos uso de un paradigma que últimamente esta en tendencia en varias startups y es el de <strong>"mobile only"</strong> de manera que su UI y UX está construida especificamente para mobile, aunque en este caso de todas formas haya una pseudoversión para escritorio en la que se visulizará la app en un layout vertical el cual simulará la pantalla y/o viewport de un smartphone.</p>
                             <div class="video-review_container">
                                 <h3>video review</h3>
                                 <video src="./assets/videos/social-net-video-review.mp4" controls muted ></video>
                             </div>
                             <p>Este proyecto basa todo su backend en el <strong>backend as a service que nos proporciona firebase</strong>, y es gracias a este backend de firebase que podemos hacer uso de su de base de datos no relacional, así como de su storage para subir archivos como lo podrían ser imágenes y videos, y también de su sistema de autenticación.</p>
-                            <p>Social-net esta construido con <strong>Next.js</strong>, el cual es el framework de React.js para trabajar del lado del servidor, de manera que podamos hacer uso de sus diferentes tipos de render ya sea <strong>CSR</strong> (Client Side Rendering) , <strong>SSR</strong> (Server Side Rendering), <strong>SSG</strong> (Static Side Generation) y/o <strong>ISR</strong> (Incremental Static Regeneration), lo cual podemos definir en cada page de nuestra aplicación a través de  métodos que nos proporciona Next.js como lo son <strong>getStaticProps </strong>junto con <strong>getStaticPaths</strong>, o haciendo uso de <strong>getServerSideProps</strong>, o simplemente renderizando en el cliente con un useEffect de React.js, también podemos hacer una combinación de estos utilizando diferentes métodos para cada page, esto  según los objetivos que persigamos para con nuestra app.</p>
-                            <p>Así las cosas ,  para la sección principal de <strong>login</strong>, habilitamos en firebase los servicios de <strong>GitHub</strong> y de <strong>Google </strong>para que el usuario se pueda dar de alta en la aplicación con cualquiera de estos dos <strong>métodos de autenticación</strong>. En cuanto a la UI podemos encontrar el logo animado de la aplicación construido desde cero con css  (haciendo uso del tag style jsx que ya nos ofrece Next.js), y también podemos observar los botones de login con un diseño un tanto minimalista.</p>
+                            <p>Social-net esta construido con <strong>Next.js</strong>, el cual es el framework de React.js para produccion con el cual podemos trabajar de lado del servidor, de manera que podamos hacer uso de sus diferentes tipos de render ya sea <strong>CSR</strong> (Client Side Rendering) , <strong>SSR</strong> (Server Side Rendering), <strong>SSG</strong> (Static Side Generation) y/o <strong>ISR</strong> (Incremental Static Regeneration), lo cual podemos definir en cada page de nuestra aplicación a través de  métodos que nos proporciona Next.js como lo son <strong>getStaticProps </strong>junto con <strong>getStaticPaths</strong>, o haciendo uso de <strong>getServerSideProps</strong>, o simplemente renderizando en el cliente con un useEffect de React.js, también podemos hacer una combinación de estos utilizando diferentes métodos para cada page, esto  según los objetivos que persigamos para con nuestra app.</p>
+                            <h2>SignIn & SignUp</h2>
+                            <p>Así las cosas ,  para la sección principal de <strong>login</strong>, habilitamos en firebase los servicios de <strong>GitHub</strong> y de <strong>Google </strong>para que el usuario se pueda dar de alta en la aplicación con cualquiera de estos dos <strong>métodos de autenticación</strong>. Ademas de esto , tambien tenemos el registro a traves de correo y contraseña, el cual al realizar dicho proceso envia un correo de validacion al correo del usuario en cuestion, ya que el usuario tiene que validar su correo para poder ingresar a la app. Tambien a la hora de hacer login el usuario puede solicitar cambiar su contraseña si la ha olvidado, y entonces se le envia un correo donde puede establecer una nueva contraseña para su cuenta. </p>
+                            <p>En cuanto a la UI de esta seccion de signIn y signUP podemos encontrar el logo animado de la aplicación construido desde cero con css  , y también podemos observar que las secciones de sigIn y signUp los manejamos con su propio modal cada una.</p>
+                             <!-- aqui va Imagen del login page -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/login-page.png" alt="pagina de login"/>
+                                <img src="./assets/images/login-modal.png" alt="modal de sigIn y signUp"/>
+                            </div>
                             <p>Una vez autenticados, el usuario es redirigido a la sección del <strong>timeline</strong> en la home donde podrá visualizar todos los comentarios que los demás usuarios de la App han creado y/o publicado.</p>
-                            <p>En la sección de la home también encontramos un header, el cual posee un botón para hacer <strong>logout</strong> de la aplicación.</p>
-                            <p>Además de este header tenemos una nav-bar en el footer en la cual tenemos un icono con forma de nota, la cual cual redirige al usuario hacia la sección donde podrá escribir lo que quiera publicar al hacer clic en el botón de "Nettear", Nettear porque denomine a cada una de las publicaciones como un Nett, asi como Twitter por su parte los denomina tuit.</p>
-                            <p> Una vez publicado dicho Nett, aparecerá de manera casi que instantánea en el timeline de la home , de manera que cualquier usuario que este visualizando el timeline de la home pueda ver dicho comentario <strong>en tiempo real</strong> y al instante de que este haya sido creado.</p>
-                            <p> En esta sección el usuario también puede <strong>subir una imagen haciendo uso del método de Drag and Drop</strong> dentro de la sección donde se escribe el Nett (debido a que dicho evento no esta disponible en móviles esta opción solo funciona de momento desde una laptop u ordenador desktop).</p>
-                            <p>En la page del timeline de la home , estamos haciendo uso de un <strong>renderizado del lado del cliente</strong> a través del hook useEffect de React , esto porque necesitamos que esta sección sea lo mas dinámica posible debido a que estará pendiente a cada comentario que se publique para que este se pueda mostrar en tiempo real, por tanto con useEffect podemos escuchar cada uno de los datos que se van adicionando a nuestra DB y asi mostrarlos al instante.</p>
-                            <p>En cuanto a la UI de cada uno de los Netts que se visualizan en el timeline de la home podemos ver que este se compone por la foto de perfil del usuario , y su nombre los cuales tomamos de la plataforma con la cual se dio de alta el usuario ya sea GitHub o su cuenta de Google, también podemos ver al costado derecho del nombre del usuario que encontramos un <strong>timestamp</strong> el cual nos indica hace cuanto se publico el Nett, y por último por supuesto también podemos observar el contenido o comentario del Nett en cuestión.</p>
-                            <p>También hacemos uso de las <strong>rutas dinámicas en Next.js</strong> , para que con esto podamos mostrar de manera individual cada Nett al que el usuario le de clic.</p>
-                            <p>Para el renderizado de cada una estas páginas de detalle hicimos uso de un <strong>renderizado del tipo estático</strong>, esto a través de getStaticprops en combinación con getStaticPaths para que dichas rutas se generasen de manera dinámica sin tener que especificar cada una de ellas manualmente.</p>
-                            <p> Y el porqué, de que cada pagina de detalles de cada Nett sea estática es porque se busca que cada uno de los Netts que se publican sean fácilmente indexados y crawleados por las spiders de Google, de manera que todo aquello que se publique en la app pueda llegar a posicionarse en motores de búsqueda, y así por ende mejorar el SEO de la app.</p>
-                            <p>Ya que lo que se busca en un principio cuando una app es nueva es atraer el mayor tráfico posible, y aunque el SEO es una estrategia que toma tiempo y no es tan inmediata como aplicar SEM, con el tiempo dicha estrategia será mucho mejor porque todo el tráfico que reciba será de manera orgánica por lo cual es algo más sostenible, y con lo cual en un futuro sería también provechoso mostrar anuncios en nuestra app, ya que una vez posicionados en el sector al que apuntemos habrán empresas y/o personas interesadas en pautar en nuestra app.</p>
-                            <p>También desde la consola de firebase establecimos algunas <strong>reglas de seguridad </strong>para que el usuario solamente pueda ingresar a las secciones de timeline de la home y la de crear un Nett, solamente si esta esta autenticado, de lo contrario si el usuario intenta ingresar a la url de dichas secciones sin estar autenticado sera redirigido automáticamente al sección de login</p>
+                            <h2>Home</h2>
+                            <p>En la home timeline podemos visualizar todos los posts que se han pulbicado en la app.</p>
+                            <!-- aqui va imagen de home-timeline -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/home-timeline.png" alt="pagina home con el timeline de todos los post"/>
+                            </div>
+                            <p>En esta pagina estamos haciendo uso de un <strong>renderizado del lado del cliente</strong> a través del hook useEffect de React , puesto que necesitamos que esta sección sea lo mas dinámica posible debido a que estará pendiente a cada comentario que se publique para que este se pueda mostrar en tiempo real, por tanto con useEffect podemos escuchar cada uno de los datos que se van adicionando a nuestra DB y asi mostrarlos al instante.</p>
+                            <h2>Estructura del post</h2>
+                            <p>Cada post se compone por; la foto de perfil del usaurio que lo publico, su username, un timestamp que indica hace cuanto se publico el post, el contenido del post ya sea solo texto, o texto e imagen y tambien en su seccion inferior vemos los iconos de comentario y favoritos. Cada una de estas secciones ejecuta una accion especifica al hacer click sobre ellas.</p>
+                            <!-- aqui imagen que muestra el nett del mutant-ape -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/nett-structure.png" alt="imagen con la estrutura del post"/>
+                            </div>
+                            <p> Al hacer click sobre la imagen de perfil o el username esto nos llevara al perfil del usuario que hizo la publicacion, donde podremos ver todos los post que este usuario ha hecho.</p>
+                            <!-- aqui imagen de la page del profile de cada user -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/profile-user-post.png" alt="pagina dinamica para el perfil de cada usuario"/>
+                            </div>
+                            <p>un click sobre el texto del contenido del post, o sobre el icono de comentario, nos llevara a la vista de detalle individual del post, donde podremos observar todos los comentarios que tiene dicho post, y por ende una seccion para agregar un comentario sobre el post en cuestion. Tambien podemos ver que el incono de comentario muestra la cantidad de comentarios que posee dicho post.</p>
+                            <!-- aqui imagen de la vista individual de cada nett -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/nett-details-page.png" alt="pagina de detalles del post con sus comentarios"/>
+                            </div>
+                            <p>Cuando damos click sobre la imagen que hace parte del contenido en el post, se abrira un modal para poder ver dicha imagen de una forma mas detallada ya que nos mostrara el tamaño completo de la imagen.</p>
+                            <p>Y, por ultimo tenemos el icono de estrella o favoritos, el cual permite al cualquier otro usuario de la app agregar dicha publicacion a su seccion de favoritos en su perfil. (este icono cumple la funcion de agregar a favoritos (estrella amarilla), y tambien si le volvemos a dar click eliminara dicho post de nuestros favoritos (estrella blanca).</p>
+                            <p>Tambien podemos ver en la parte superior derecha de cada uno de nuestros posts, o comentarios que hagamos dentro de los posts, un incono de “cesta de basura” la cual nos permitira eliminar el post o el comentario correspondiente.</p>
+                            <h2>Header</h2>
+                            <p>En la sección de la home también encontramos un header, el cual posee un botón para hacer logout de la aplicación</p>
+                            <!-- aqui imagen del header -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/header-social-net.png" alt="estrutura del header de la aplicacion"/>
+                            </div>
+                            <h2>Footer navbar</h2>
+                            <p>A demás de este header tenemos una nav-bar en el footer en la cual tenemos varios iconos que nos llevan a alguna seccion en especifico de la app.</p>
+                            <!-- aqui imagen de la footer navbar -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/nav-footer.png" alt="estructura de la footer nav de la aplicacion"/>
+                            </div>
+                            <p>el icono de la “Home”, nos permitira refrescar la home.</p>
+                            <p>En esta footer nav bar tambien encontramos el icono de una “lupa”, la cual como podemos intuir nos servira para hacer una busqueda, en especifico la busqueda de cualquier usuario en la app que haya hecho alguna publicacion (un usaurio solo aparecerá en el buscador si ha hecho alguna publicacion, de lo contrario no aparecera en los resultados).</p>
+                            <!-- aqui imagenes de la page de buscador de users -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/search-user-input.png" alt="pagina para buscar usuarios de la aplicacion"/>
+                                <img src="./assets/images/search-user.png" alt="pestaña desplegada con el resultado del usuario buscado"/>
+                            </div>
+                            <p>Encontramos además, un icono con forma de “tomar nota”; la cual dirigirá al usuario hacia la sección donde podrá escribir lo que quiera publicar al hacer clic en el botón de "Nettear", Nettear porque denomine a cada una de las publicaciones como un Nett, asi como Twitter por su parte los denomina tuit. Una vez publicado dicho Nett, aparecerá de manera casi que instantánea en el timeline de la home , de manera que cualquier usuario que este visualizando el timeline de la home pueda ver dicho comentario en tiempo real y al instante de que este haya sido creado.</p>
+                            <!-- aqui imagne de la page de crear nett -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/create-nett.png" alt="pagina para crear un nuevo post"/>
+                            </div>
+                            <p> En esta sección el usuario también puede subir una imagen haciendo uso del método de Drag and Drop dentro de la sección donde se escribe el Nett (debido a que dicho evento no esta disponible en móviles esta opción solo funciona  desde una laptop u ordenador desktop), o tambien podemos agregar una imagen haciendo click en el boton negro que posee el icono de una imagen, el cual abrira el explorador de archivos de nuestra pc o movil, para que podamos elegir alguna imagen que tengamos guardada en el equipo, o en el movil tambien tenemos la opcion de abrir la camara para tomar un foto en ese mismo instante y subirla a nuestro post.</p>
+                            <p>Y en ultimo lugar encontramos un icono en forma de circulo que posee la imagen de nuestro avatar, el cual al hacer click nos llevara a nuestro perfil</p>
+                            <h2>Profile</h2>
+                            <p>En esta seccion entonces podemos actualizar nuestra imagen de avatar y username, tambien tendremos 2 secciones , una que dice “tus Netts” que nos mostrara todos los posts que hemos publicado, y tambien una seccion que dice “favs” en la cual podremos ver una coleccion de posts a los cuales les hemos dado favoritos, los cuales estan disponibles para consultarlo en cualquier momento , siempre y cuando el usuario que publico el post no lo haya eliminado.</p>
+                            <!-- aqui imagen de la page de prifle del current user -->
+                            <div class="project-screenshots_container">
+                                <img src="./assets/images/profile-page.png" alt="pagina de login"/>
+                            </div>
+                            <p>Como ya dijimos anteriormente podemos agregar y eliminar de favoritos cualquier post desde cualquier lugar donde estemos visualizando dicho post, ya sea desde el timeline de la home, desde la vista individual del post , o desde nuestra seccion de favoritos del perfil.</p>
+                            <h2>Dynamic routes</h2>
+                            <p>También hacemos uso de las rutas dinámicas en Next.js , para que con esto podamos mostrar de manera individual cada Nett al que el usuario le de clic. Para el renderizado de cada una estas paginas de detalle hicimos uso de un renderizado desde el servidor , esto a traves de getServerSideProps . de esta manera estamos logrando entregar al browser una estructura de html lista, que ha sido renderizada previamente en el servidor</p>
+                            <p>Y el porqué, de que cada pagina de detalles de cada Nett se renderize desde el servidor es porque se busca que cada uno de los Netts que se publican sean fácilmente indexados y crawleados por las spiders de Google, de manera que todo aquello que se publique en la app pueda llegar a posicionarse en motores de búsqueda, y así por ende mejorar el SEO  de la app. </p>
+                            <p>También desde la consola de firebase establecimos algunas <strong>reglas de seguridad</strong>para que el usuario solamente pueda ingresar a las secciones de timeline de la home y la de crear un Nett, solamente si  esta autenticado y ha verificado su correo a la hora de registrarse, de lo contrario si el usuario intenta ingresar a la url de dichas secciones sin estar autenticado sera redirigido automáticamente al sección de login.</p>
                         </div>
                         <a href="https://social-net-phi.vercel.app/" target="_blank">Vistar sitio</a>
                     </div>
