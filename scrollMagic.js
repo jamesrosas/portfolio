@@ -7,7 +7,7 @@ const scrollFunction = (trigger, time,  element, animation) => {
         duration: time
     })
         .setTween(element, 1 , animation)
-        .addIndicators({name: "aqui (200ms)"})
+        // .addIndicators({name: "aqui (200ms)"})
         .addTo(controller);
 }
 
