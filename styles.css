@@ -1670,6 +1670,18 @@ footer p {
     .preview-modal a, .preview-modal2 a , .preview-modal h4, .preview-modal2 h4{
         font-size: 2.4rem;
     }
+    .preview-modal a, .preview-modal2 a {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .preview-modal a p, .preview-modal2 a p {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        border-radius: 0;
+    }
 
 
     .media-container {
