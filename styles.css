@@ -1489,7 +1489,8 @@ footer p {
         width: 407px;
     }
     .text-animation video {
-        left: -.4rem;
+        /* left: -.4rem; */
+        display: none;
     }
 
     .the-name {
@@ -1661,6 +1662,10 @@ footer p {
     .card-project p{
         font-size: 18px;
     }
+
+    .image-card video {
+        display: none;
+    }
     
     
     .card-project_container:hover .hover-view {
@@ -1741,7 +1746,8 @@ footer p {
         height: 140px;
     }
     .text-animation video {
-        left: -1rem;
+        /* left: -1rem; */
+        display: none;
     }
     .small-font {
         top: 1rem;
