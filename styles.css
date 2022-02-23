@@ -76,6 +76,7 @@ header img {
     width: 30%;
     position: relative;
 }
+
 .logo-container img{
     position: absolute;
     left: 2rem;
@@ -327,6 +328,10 @@ header img {
 .light-ball {
     width: 3rem;
     transform: translateY(210px);
+}
+
+.left-arm svg, .right-arm svg {
+    opacity: 0.8;
 }
 
 .light-container_mobile, .round-light_mobile, .round-light_tablet {
@@ -1238,7 +1243,9 @@ footer p {
     .light-container, .round-light {
         display: none;
     }
-
+    .light-container_mobile svg {
+        opacity: 0.9;
+    }
     .light-container_mobile {
         width: 100%;
         height: 707px;
@@ -1265,8 +1272,9 @@ footer p {
         opacity: 0;
     }
 
-    .light-container_mobile img {
+    .light-container_mobile svg {
         width: 600px;
+        height: 337px;
     }
     .left-arm, .right-arm {
         display: none;
@@ -1396,9 +1404,12 @@ footer p {
     .light-container_mobile {
         height: 640px;
     }
-    .light-container_mobile img {
+    
+    .light-container_mobile svg {
         width: 400px;
+        height: 243px;
     }
+   
     .right-arm_mobile {
         right: -13rem;
         top: 5rem;
@@ -1561,9 +1572,12 @@ footer p {
         opacity: 0;
 
     }
-    .light-container_mobile img {
+    
+    .light-container_mobile svg {
         width: 270px;
+        height: 164px;
     }
+    
     .left-arm, .right-arm {
         display: none;
     }
