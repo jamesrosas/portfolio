@@ -409,16 +409,41 @@ header img {
     opacity: 0;
     filter: drop-shadow(2px 2px 4px var(--light-blue));
 }
+.rrss-contact {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.rrss-contact svg {
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 4px var(--light-blue));
+}
 .icon-container {
     /* border: 1px solid red; */
     /* margin-bottom: 2rem; */
     height: 4rem;
     width: 4rem;
 }
+.icon-container_contact {
+    /* border: 1px solid red; */
+    /* margin-bottom: 2rem; */
+    height: 5rem;
+    width: 5rem;
+}
 .icon-container:hover svg path {
     color: var(--light-blue);
 }
+.icon-container_contact:hover svg path {
+    color: var(--light-blue);
+}
 .rrss svg path {
+    stroke: var(--light-blue);
+    stroke-width: 15px;
+    color: transparent;
+}
+.rrss-contact svg path {
     stroke: var(--light-blue);
     stroke-width: 15px;
     color: transparent;
@@ -608,6 +633,7 @@ header img {
     /* border: 1px solid red; */
     position: relative;
     margin: 2rem 1rem;
+    z-index: 20;
 }
 
 .card-project {
